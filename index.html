@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Task 5</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task 5</title>
+</head>
+<body>
+   
+    <h1  style="margin-top: 120px; text-align: center; align-items: center; justify-content: center; display: flex;">Simple Calculator</h1>
+    <center>
+        <div class="container" style="margin-top: 100px;">
+            <tr>
+                <td><input type="text" placeholder=" Enter  Number 1" id="num1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder=" Enter  Number 2" id="num2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="operation">
+                        <option value="none">None</option>
+                        <option value="add">Add</option>
+                        <option value="sub">Subtract</option>
+                        <option value="mul">Multiply</option>
+                        <option value="div">Divide</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Calculate" onclick="Calc()" ></td>
+            </tr>
+            <tr>
+                <td><p id="result" ></p></td>
+            </tr>
+        </div>
+    </center>
+
+    <script>
+        function Calc(){
+            var num1 = Number(document.getElementById('num1').value);
+            var num2 = Number(document.getElementById('num2').value);
+            var op = document.getElementById('operation').value;
+         
+
+            //SWICTH
+
+            switch (op){
+                case "none":
+                     var ans= "Please Enter proper Operator";
+                     document.getElementById('result').innerHTML = ans;
+                     break;
+                case "add":
+                    var ans= num1  + num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "sub":
+                    var ans= num1 - num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "mul":
+                    var ans= num1 * num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "div":
+                    var ans= num1 / num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
